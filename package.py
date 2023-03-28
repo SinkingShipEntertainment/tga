@@ -4,7 +4,7 @@ authors = [
     "TGA dev"
 ]
 
-version = "1.0.0.sse.1.0.0"
+version = "1.0.0.sse.1.0.1"
 
 description = \
     """
@@ -61,3 +61,6 @@ def commands():
     env.TGA_ROOT = "{root}"
     env.TGA_LOCATION = "{root}"
     env.LD_LIBRARY_PATH.append("{root}/lib")
+
+    if building:
+        env.CMAKE_MODULE_PATH.append("{root}/cmake")

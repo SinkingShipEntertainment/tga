@@ -14,3 +14,5 @@ add_library(tga-lib
 
 set_target_properties(tga-lib PROPERTIES PUBLIC_HEADER "tga.h")
 install(TARGETS tga-lib ARCHIVE DESTINATION lib PUBLIC_HEADER DESTINATION include)
+
+install(DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/cmake DESTINATION ${CMAKE_INSTALL_PREFIX})
